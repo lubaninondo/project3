@@ -12,10 +12,10 @@ UX
     The delete button in the categories is used to delete the categories
     Read feature- If you click on the name of the recipe one can read how to prepare the meal.
 Technology Used
-    Bson
-    Python 3
-    Mongo
-    Flask
+    Bson- Data was encoded using Bson
+    Python 3- The language used to run the model is python3
+    MongoDB- The database used was MongoDB
+    Flask- Framework that was used was flask
 Testing
     Task Add
     Click into Add task, then fill all the lines. Go back to Home the name of recipe will be appearing.

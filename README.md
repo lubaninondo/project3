@@ -14,7 +14,8 @@ UX
 Technology Used
     Bson
     Python 3
-    
+    Mongo
+    Flask
 Testing
     Task Add
     Click into Add task, then fill all the lines. Go back to Home the name of recipe will be appearing.

@@ -58,6 +58,11 @@ The design was made in such a way that the hotel can easily add new recipes and 
    **Delete Task**
    
     In home page just click Del and the task will be deleted
+    
+    **Responsiveness**
+    
+    The website was tested and respond to devices of different sizes. Right click in the website, click on inspect. Adjust size of
+    screen and see how it responds to different devices.
 
 **#Deployment**
 

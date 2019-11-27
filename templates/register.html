@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
+    <title>Burger Recipes</title>
+</head>
+<body class="bg-image">
+    
+    <section class="container text-center position-of-content">
+      <a id='link-text'href="/" style="
+    text-decoration: none;
+    color: white;"><h1 class="font-color">Burger Recipes</h1></a>
+    <form action='{{url_for("register")}}' method='POST' class="col s12 text-center bg-form">
+      <h4 class="font-color">Register</h4>
+      <div class="row">
+        <div class="input-field text-center font-color">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="username" name='username' type="text" class="validate font-color" placeholder="username" required>
+          
+          {% for message in messages %} 
+                     <h5 class="font3">
+                         {{ message }}                                                                
+                     </h5>
+                   {% endfor %}
+        </div>
+        </div>
+        <div class="row">
+        <div class="input-field text-center font-color">
+          <i class="material-icons prefix">email</i>
+          <input id="email" name='email' type="email" class="validate font-color" placeholder="Email" required>
+          
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field text-center font-color">
+          <i class="material-icons prefix">vpn_key</i>
+          <input id="password" name='password'type="password" class="validate font-color" placeholder="Password" required>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-md-12">
+      <button class="btn waves-effect waves-light" type="submit" name="action">Sign Up
+    <i class="material-icons right">exit_to_app</i>
+  </button>
+  </div>
+    </div>
+    <a style="
+    text-decoration: none;
+    color: white;"class="font-color link-text" href="{{url_for('index')}}"><strong>Have a account?</strong></a>
+    </form>
+  </div>
+  </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

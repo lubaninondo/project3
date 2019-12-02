@@ -8,7 +8,7 @@ from bson.objectid import ObjectId
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'project_manager'
-app.config["MONGO_URI"] = os.getenv("MONGO_URI")
+app.config['MONGO_URI'] = os.getenv("MONGO_URI")
 
 mongo = PyMongo(app)
 
@@ -27,22 +27,22 @@ def register():
         reg_id = register.insert_one(request.form.to_dict())
         # print(register)
         object_id = reg_id.inserted_id
-        return redirect(url_for('get_tasks',register_id=object_id))
+        return redirect(url_for('get_recipe',register_id=object_id))
     return render_template('register.html')
 
 """
-Login page action. Firstly, method must be post and we will find the given password and author if it match we will
+Login page action. Firstly, method must be post and we will find the given password and username if it match we will
 redirect to get recipes if not redirect to register and if password only incorrect we will show password is incorrect
 """
 @app.route('/login', methods=["GET","POST"])
 def login():
     if request.method == 'POST':
-        login_user = mongo.db.register.find_one({'author': request.form['author']})
+        login_user = mongo.db.register.find_one({'username': request.form['username']})
         form = request.form
         if login_user:
             if(form["password"] == login_user["password"]): # if password correct
-                session['author'] = login_user["author"]
-                return redirect(url_for('get_tasks',register_id = login_user["_id"]))
+                session['username'] = login_user["username"]
+                return redirect(url_for('get_recipe',register_id = login_user["_id"]))
             else: # and if password is not correct
                flash("Incorrect password") 
         else:# if not exist

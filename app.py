@@ -27,7 +27,7 @@ def register():
         reg_id = register.insert_one(request.form.to_dict())
         # print(register)
         object_id = reg_id.inserted_id
-        return redirect(url_for('get_recipe',register_id=object_id))
+        return redirect(url_for('get_task',register_id=object_id))
     return render_template('register.html')
 
 """

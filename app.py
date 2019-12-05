@@ -2,14 +2,18 @@ import os
 import env
 from flask import Flask, render_template, redirect, request, url_for, flash,  session, make_response, current_app
 from flask_login import LoginManager 
+from flask_user import login_required, UserManager, UserMixin
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from werkzeug.security import generate_password_hash, check_password_hash
+
 
 
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'project_manager'
 app.config["MONGO_URI"] = os.getenv("MONGO_URI")
+app.config['SECRET_KEY'] = 'the random string'   
 
 mongo = PyMongo(app)
 
@@ -53,12 +57,14 @@ def register():
 
 
 @app.route('/add_task')
+@login_required
 def add_task():
     return render_template('addtask.html',
     categories= mongo.db.categories.find())
 
 
 @app.route('/insert_task', methods=['POST'])
+@login_required
 def insert_task():
     tasks =  mongo.db.tasks
     tasks.insert_one(request.form.to_dict())
@@ -66,6 +72,7 @@ def insert_task():
 
 
 @app.route('/edit_task/<task_id>')
+@login_required
 def edit_task(task_id):
     the_task =  mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
     all_categories =  mongo.db.categories.find()
@@ -122,9 +129,15 @@ def insert_category():
 @app.route('/add_category')
 def add_category():
     return render_template('addcategory.html')
-    
+
+@app.route('/logout')
+def logout():
+    session.pop('username')
+    flash("Successfully logged out ...")
+    return_url = request.referrer
+    return redirect(return_url)   
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=os.environ.get('PORT'),
-            debug=False)
+            debug=True)

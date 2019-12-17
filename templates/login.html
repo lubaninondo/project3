@@ -1,11 +1,17 @@
 
-{% extends 'base.html'%} 
-{% block titleimage %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
+</head>
+
+<body>
 <div>
     <h1 class="center-align">Log In!</h1>
 </div>
-{% endblock %}
-{% block content %}
 <div class="container">
     {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -38,4 +44,6 @@
         </form>
     </div>
 </div>
-{% endblock %}
+</body>
+
+</html>

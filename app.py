@@ -73,7 +73,9 @@ def get_tasks():
 def insert_task():
     tasks =  mongo.db.tasks
     tasks.insert_one(request.form.to_dict())
-    return redirect(url_for('get_tasks'))
+    authors = mongo.db.authors
+    authors.insert_one({"author" : request.form.get("author")})
+    return redirect(url_for('get_tasks'),tasks=mongo.db.tasks.find())
 
 
 @app.route('/update_task/<task_id>', methods=["POST"])
@@ -89,6 +91,8 @@ def update_task(task_id):
         'country':request.form.get('country'),
         'imageURL':request.form.get('imageURL')
     })
+    authors = mongo.db.authors
+    authors.insert_one({"author" : request.form.get("author")})
     return redirect(url_for('get_tasks'),tasks=mongo.db.tasks.find(task_id))
 
 @app.route('/delete_task/<task_id>')

@@ -1,30 +1,50 @@
 {% extends 'base.html'%} {% block content %}
-<div class="row">
-    <ul class="collapsible" data-collapsible="accordion">
+<div class="container">
+   <ul class="collapsible" data-collapsible="accordion">
         {% for task in tasks %}
-        <li>
+        
+     
+       
+            <div class=" task_header col s9">
+                    <b></p> <strong>{{task.task_name}}</strong> -{{task.recipe_name}}</b>
+            </div>
+            
+            <div class="col-sm-12 ">
+                <p><b>Author</b>: {{task.author}}</p>
+            </div>
+            <div class="col-sm-12 ">
+                <p><b>Task</b>: {{task.task_description}} </p>
+            </div>
+       
+            <div class="col-sm-12 ingredients_padding">
+                <p class="text_format"><b>Ingredients</b>: {{task.ingredients}}</p>
+            </div>
+            <div class="col-sm-12">
+                <p class="text_format"><b>Allergens</b>: {{task.allergens}}</p>
+            </div>
+            <div class="col-sm-12">
+                <img src="static/images/photo.jpg" alt="Food" height="42" width="42">
+            </div>
+            
+        {% if task.author == session["username"] %}
             <div class="collapsible-header">
                 <div class="col s3">
                     <i class="material-icons">expand_more</i>
                     <a href="{{url_for('delete_task', task_id=task._id)}}" class="waves-effect waves-light btn btn_small">Del</a>
                     <a href="{{url_for('edit_task', task_id=task._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
-                </div>        
-                <div class=" task_header col s9">
-                    <strong>{{task.task_name}}</strong> -{{task.recipe_name}}
-                </div>
-            </div>
-            <div class="collapsible-body">
-                <span>
-                {{task.task_description}} 
-            </span>
-            <span>
-                {{task.imageURL}} 
-            </span>
-            
-            </div>
-        </li>
+            </div>        
+       
+        
+        {% endif %}
         {% endfor %}
-
     </ul>
-</div>
+</div>  
+
+
 {% endblock %}
+
+
+
+
+
+

@@ -9,3 +9,22 @@
 .task_header {
     margin-top: 5px;
 }
+
+div.background {
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_xcxwMVgB7AtcvL154v9nWi4LDFs2MZ24J4LHFe_NTHGCCOrt&s) repeat;
+  border: 2px solid black;
+}
+
+div.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}

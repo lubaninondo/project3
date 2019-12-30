@@ -87,8 +87,6 @@ def update_task(task_id):
         'task_description': request.form.get('task_description'),
         'allergens': request.form.get('allergens'),
         'author': request.form.get('username'),
-        'country':request.form.get('country'),
-        'imageURL':request.form.get('imageURL')
     })
     authors = mongo.db.authors
     authors.insert_one({"author" : request.form.get("author")})

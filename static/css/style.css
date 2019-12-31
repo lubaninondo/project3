@@ -10,3 +10,9 @@
     margin-top: 10px;
 }
 
+@media(min-width: 992px) {
+    .section-column {
+        padding: 0 30px 30px;
+        float: none;
+        display: table-cell;
+    }}

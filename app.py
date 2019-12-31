@@ -45,7 +45,7 @@ def register():
                             'email' : request.form['email']
             })
             session['username'] = request.form['username']
-            return redirect(url_for('get_tasks'))
+            return redirect(url_for('index'))
         flash("Username already exist! Try again!")
     return render_template('register.html')
 
@@ -68,13 +68,6 @@ def get_tasks():
 
 
 
-@app.route('/insert_task', methods=['POST'])
-def insert_task():
-    tasks =  mongo.db.tasks
-    tasks.insert_one(request.form.to_dict())
-    authors = mongo.db.authors
-    authors.insert_one({"author" : request.form.get("author")})
-    return redirect(url_for('get_tasks'),tasks=mongo.db.tasks.find())
 
 
 @app.route('/update_task/<task_id>', methods=["POST"])
@@ -134,22 +127,7 @@ def logout():
     session.pop('username')
     flash("Successfully logged out ...")
     return redirect(url_for('index')) 
-    
-@app.route('/search', methods=['POST','GET'])
-def search(): 
-    return render_template('search.html', tasks=mongo.db.tasks.find_one({'_id':ObjectId()}))
-
-
-@app.route('/search_recipes', methods=['POST','GET'])
-def search_recipes():
-    if request.method == "POST":
-        recipes=list(mongo.db.recipes.find({"name": {"$regex":request.form['search']}}))
-        print(recipes,request.form.get('search'))
-        if recipes:
-            return render_template('search_recipes.html', tasks=mongo.db.tasks.find_one({'_id':ObjectId()}),recipes=recipes)
-        else:
-            return render_template('404.html', tasks=mongo.db.tasks.find_one({'_id':ObjectId()}), recipes=recipes,message='No recipes found')
-    return render_template('search.html', tasks=mongo.db.tasks.find_one({'_id':ObjectId()}),recipes=recipes)        
+      
     
 
 if __name__ == '__main__':

@@ -16,6 +16,7 @@
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="{{url_for('get_tasks')}}">Home</a></li>
                     <li><a href="{{url_for('add_task')}}">New Task</a></li>
+                   
                 <ul class="right hide-on-med-and-down">
                 {% if session.username %}
                 <li>Hello, {{ session.username }}!</li>

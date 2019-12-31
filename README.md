@@ -63,9 +63,26 @@ Registered users can simple login and use the website
     
     Materialize- https://materializecss.com/ Materialize frame work was also used
     
-**#Testing**
+# **Testing**
 
-    **Add Task**
+## **Registration**:
+
+Fill in the registration form. Email address, password and username are needed
+
+
+1. If a registered username is used then a message saying username already exist appears
+
+
+2. Correctly filling of the registration form and submitting will create an account and direct the user to the homepage
+
+## **Log In**:
+
+A registered user can use the username and password to register
+
+
+
+
+**Add Task**
     
     Click into Add task, then fill all the lines. Go back to Home the name of recipe will be appearing.
     

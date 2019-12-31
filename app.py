@@ -45,7 +45,7 @@ def register():
                             'email' : request.form['email']
             })
             session['username'] = request.form['username']
-            return redirect(url_for('index'))
+            return redirect(url_for('get_tasks'))
         flash("Username already exist! Try again!")
     return render_template('register.html')
 

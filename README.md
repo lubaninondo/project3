@@ -1,25 +1,55 @@
 # **Project 3**
 
-The project allows for online cookbooks to be submitted online by hotel managers/ chefs of an International hote;. A user can add the name of the recipe, the author of the recipes and describe how to prepare the meal. Allergens should be mentioned if there available or not. If there are available there can be mentioned. The country where the authors resides can be also be added.
-The user also has the ability to edit his/her recipe before and after submission. If an additional category is needed the user can add using the manage categories button.
+The project allows for online cookbooks to be submitted online by hotel managers/ chefs of an International hote;. A user can add the name of the recipe, the author of the recipes and describe how to prepare the meal. Allergens should be mentioned if there available or not. If there are available there can be mentioned. 
+The user also has the ability to edit his/her recipe before and after submission. 
 
-**# UX**
+# **UX**
 
-The website is ideal for organization deal with cooking especially for an international market such a hotel. The recipes can be created and be stored in the system by various users and depicting the country where it was created. Different meals therefore can be prepared with clear instruction already available for the hotel. The hotel will know the required ingredients and advice the client on any allergens.
+The website is ideal for individuals and chefs who like to share recipes and improve their cooking. The website was designed in such a way that the user can delete or edit the recipe they created but cannot change the ones created by other users. Users can view all the recipes
 
-The design was made in such a way that the hotel can easily add new recipes and delete them if there are no longer needed. The recipes can be modified to with changes in taste in the market using the edit button.
+First time users have to register using the email, username and password.
 
-**#Features**
+Registered users can simple login and use the website
 
-    Project 3 has all CRUD facilities. One can create, read, update and delete.
+# **Features**
+
+   Project 3 has the following features:
+   
+   ## **Registration** :
+   
+   New Users can register by filling the registration form. Email address, Username and password are needed to register an account
+   
+   ## **Login**
+   
+   Registered users can login by filling the login form and use the website. Username and password are needed for loging in.
+   
+   ## **Create/Add recipe**
+   
+   Only registered users can create a recipe by clicking the new task button and fill the form
+   
+   ## **Delete**
+   
+   Only the creator of the recipe can delete it by clicking del in front of her recipe
+   
+   ## **Edit Recipe**
     
-    One can use create a new food menu through the _add task_ function in navigation bar.
+ Only the creator of the recipe can edit it by clicking edit in front of her recipe and fill in the edit task form
+ 
+ ## **Read**
+ 
+ Only registered users have access to view recipes created by them and other users
+ 
+ 
+ The following features are yet to be implemented:
+ 
+ ## **Comment**
+ 
+ Allow users to comment on the recipes and give further suggestions
+ 
+ ## **Like**
+ 
+ Allow the users to click the like button for the recipe that they like
     
-    The _edit feature_ is used to update the menu 
-    
-    The _delete button_ in the categories is used to delete the categories and tasks
-    
-    _Read feature_- If you click on the name of the recipe one can read how to prepare the meal.
     
 **#Technology Used**
 

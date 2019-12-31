@@ -118,6 +118,21 @@ A registered user can use the username and password to login
 
 The  project was deployed to [Heroku](http://project3-heroku-mongo.herokuapp.com/) with a separate [Github](https://github.com/lubaninondo/project3)
 
+**This is how I deployed to Heroku:**
+
+ I click deployed on Heroku and connected to GitHub and chose lubaninondo/project3.
+ 
+ I clicked deploy branch.
+ 
+ **Var Config*
+ 
+ MONGO_URI
+ 
+ IP
+ 
+ PORT
+ 
+ 
 
 
 # **Credit**

@@ -111,9 +111,9 @@ The  project was deployed to [Heroku](http://project3-heroku-mongo.herokuapp.com
 
 
 
-#**Credit**
+# **Credit**
 
- ## **Acknowledgement**
+## **Acknowledgement**
     
 Thanks to Zartis who kept on encouraging me to do the course
 

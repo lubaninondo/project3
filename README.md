@@ -33,20 +33,20 @@ Registered users can simple login and use the website
    
    ## **Edit Recipe**
     
- Only the creator of the recipe can edit it by clicking edit in front of her recipe and fill in the edit task form
+    Only the creator of the recipe can edit it by clicking edit in front of her recipe and fill in the edit task form
  
- ## **Read**
+   ## **Read**
  
  Only registered users have access to view recipes created by them and other users
  
  
  The following features are yet to be implemented:
  
- ## **Comment**
+   ## **Comment**
  
- Allow users to comment on the recipes and give further suggestions
+   Allow users to comment on the recipes and give further suggestions
  
- ## **Like**
+   ## **Like**
  
  Allow the users to click the like button for the recipe that they like
     
@@ -77,49 +77,50 @@ Fill in the registration form. Email address, password and username are needed
 
 ## **Log In**:
 
-A registered user can use the username and password to register
+A registered user can use the username and password to login
+
+1. Correct username and password results in the user logging in and directed to the home page
+
+2. Using an unregistered username results in failure to login and a message saying username does not exist appearing
+
+3.Wrong password results in failure to log in and a wrong password message appearing
 
 
-
-
-**Add Task**
+## **Add Task**
     
-    Click into Add task, then fill all the lines. Go back to Home the name of recipe will be appearing.
+  Click New task, then fill form and submit. New recipe will be created and will be directed to the home page
+  
     
-    **Editing**
+ ## **Editing**
     
-    Click on the edit button, change any information in any variable and update task. Click on the name of the recipe and will view the      change
+  Click on the edit button in front of the recipe created by the user, change any information in any variable and update task. Recipe     will be updated and user will be redirected to home page
     
-    **Add Categories**
-    
-    Click on manage categories. Add category, write the name of the category and then add category
-    
-    **Update category**
-    
-    Go to manage category, then click edit, change the name of the category and then save any changes.
-    
-    **Delete Category**
-    
-    Go to manage categories, the click Del. Category will be deleted.
    
-   **Delete Task**
+  ## **Delete Task**
    
-    In home page just click Del and the task will be deleted
+   Click on the Del button in front of the recipe created by the user, Delete the task and the user will be redirected to home page
     
-    **Responsiveness**
+   
+   ## **Responsiveness**
     
-    The website was tested and respond to devices of different sizes. Right click in the website, click on inspect. Adjust size of
-    screen and see how it responds to different devices.
+   The website was tested and respond to devices of different sizes using Chrome Developer tools. Right click in the website, click on      inspect. Adjust size of screen and see how it responds to different devices.
 
-**#Deployment**
+# **Deployment**
 
-    The whole project was deployed to Heroku with the exception of   which was a development version
+The  project was deployed to [Heroku](http://project3-heroku-mongo.herokuapp.com/) with a separate [Github](https://github.com/lubaninondo/project3)
 
-**#Credit**
 
-    **Acknowledge**
+
+#**Credit**
+
+ ## **Acknowledgement**
     
-    Thanks to Zartis who kept on encouraging me to do the course
+Thanks to Zartis who kept on encouraging me to do the course
+
+The project was inspired by [jstokes1994](https://github.com/Code-Institute-Submissions/online-cookbook-2), [Ramanathan03](https://github.com/Code-Institute-Submissions/recipes-1), [Idettore](https://github.com/ldettorre/yummy) and [Code Institute](https://github.com/Code-Institute-Solutions/TaskManager)
+
+## **Media**
+
 Food images are from [veronicamollica]( http://veronicamollica.com/vegan-vs-flexitarian/) , [one.org](https://www.one.org/us/blog/10-popular-dishes-from-across-africa/) 
 
 

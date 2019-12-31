@@ -53,15 +53,24 @@ Registered users can simple login and use the website
     
 **#Technology Used**
 
-    Bson- Data was encoded using Bson
+
+  [HTML5](https://html.spec.whatwg.org/multipage/) for structuring the page
+
+  [CSS](https://www.w3schools.com/css/) for styling the project
+  
+
+  [Bson](http://bsonspec.org/)  was used for encoding
     
-    Python 3- The language used to run the model is python3
+  [Python 3](https://www.python.org/)  The language used to run the model is python3
     
-    MongoDB- The database used was MongoDB
+  
+  [MongoDB](https://www.mongodb.com/) was the database used
     
-    Flask- Framework that was used was flask
+  
+  [Flask](http://flask.palletsprojects.com/en/1.1.x/) framework for building a useful websitek
+   
     
-    Materialize- https://materializecss.com/ Materialize frame work was also used
+  [Materialize](https://materializecss.com/)  frame work to provide a better UX
     
 # **Testing**
 

@@ -103,5 +103,6 @@ Registered users can simple login and use the website
     **Acknowledge**
     
     Thanks to Zartis who kept on encouraging me to do the course
+Food images are from [veronicamollica]( http://veronicamollica.com/vegan-vs-flexitarian/) , [one.org](https://www.one.org/us/blog/10-popular-dishes-from-across-africa/) 
 
 

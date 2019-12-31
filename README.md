@@ -33,7 +33,7 @@ Registered users can simple login and use the website
    
    ## **Edit Recipe**
     
-    Only the creator of the recipe can edit it by clicking edit in front of her recipe and fill in the edit task form
+   Only the creator of the recipe can edit it by clicking edit in front of her recipe and fill in the edit task form
  
    ## **Read**
  

@@ -124,7 +124,7 @@ The  project was deployed to [Heroku](http://project3-heroku-mongo.herokuapp.com
  
  I clicked deploy branch.
  
- **Var Config*
+ **Var Config**
  
  MONGO_URI
  

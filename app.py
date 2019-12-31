@@ -68,6 +68,13 @@ def get_tasks():
 
 
 
+@app.route('/insert_task', methods=['POST'])
+def insert_task():
+    tasks =  mongo.db.tasks
+    tasks.insert_one(request.form.to_dict())
+    authors = mongo.db.authors
+    authors.insert_one({"author" : request.form.get("author")})
+    return redirect(url_for('get_tasks'))
 
 
 @app.route('/update_task/<task_id>', methods=["POST"])
@@ -79,11 +86,11 @@ def update_task(task_id):
         'ingredients':request.form.get('ingredients'),
         'task_description': request.form.get('task_description'),
         'allergens': request.form.get('allergens'),
-        'author': request.form.get('username'),
+        'author': request.form.get('username')
     })
     authors = mongo.db.authors
     authors.insert_one({"author" : request.form.get("author")})
-    return redirect(url_for('get_tasks'),tasks=mongo.db.tasks.find(task_id))
+    return redirect(url_for('get_tasks'))
 
 @app.route('/delete_task/<task_id>')
 def delete_task(task_id):

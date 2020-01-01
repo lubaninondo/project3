@@ -116,7 +116,7 @@ A registered user can use the username and password to login
 
 # **Deployment**
 
-The  project was deployed to [Heroku](http://project3-heroku-mongo.herokuapp.com/) with a separate [Github](https://github.com/lubaninondo/project3)
+The  project was deployed to [Heroku](http://project3-heroku-mongo.herokuapp.com/) with a separate [Github](https://github.com/lubaninondo/project3) branch
 
 **This is how I deployed to Heroku:**
 

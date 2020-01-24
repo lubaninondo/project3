@@ -6,9 +6,11 @@
     
 }
 
-.task_header {
+.recipe_header {
     margin-top: 10px;
 }
+
+
 
 @media(min-width: 992px) {
     .section-column {

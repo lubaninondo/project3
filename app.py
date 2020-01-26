@@ -18,9 +18,10 @@ mongo = PyMongo(app)
 
 
 @app.route('/')
-def index():
-    return render_template('index.html')
+def get_recipes():
+    return render_template("recipes.html", recipes=mongo.db.recipes.find()) 
     
+
 
 @app.route('/login', methods=["POST", "GET"])
 def login():
@@ -48,11 +49,14 @@ def register():
             return redirect(url_for('get_recipes'))
         flash("Username already exist! Try again!")
     return render_template('register.html')
-
+    
 @app.route('/add_recipe')
 def add_recipe():
     the_recipe =  mongo.db.recipes.find_one({"_id": ObjectId()})
-    return render_template('addrecipe.html',recipe=the_recipe,)
+    if "username" in session:
+        return render_template('addrecipe.html',recipe=the_recipe,)
+    else:
+        return render_template("index.html")
 
     
 @app.route('/edit_recipe/<recipe_id>')
@@ -62,9 +66,7 @@ def edit_recipe(recipe_id):
     return render_template('editrecipe.html', recipe=the_recipe,
     categories=all_categories)
 
-@app.route('/get_recipes')
-def get_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find())    
+   
 
 
 

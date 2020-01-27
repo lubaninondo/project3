@@ -16,8 +16,11 @@ app.config['SECRET_KEY'] = 'the random string'
 
 mongo = PyMongo(app)
 
-
 @app.route('/')
+def index():
+    return render_template('index.html')
+    
+@app.route('/get_recipes')
 def get_recipes():
     return render_template("recipes.html", recipes=mongo.db.recipes.find()) 
     
@@ -75,7 +78,7 @@ def insert_recipe():
     recipes =  mongo.db.recipes
     recipes.insert_one(request.form.to_dict())
     authors = mongo.db.authors
-    authors.insert_one({"author" : request.form.get("author")})
+    authors.insert_one({"username" : request.form.get("username")})
     return redirect(url_for('get_recipes'))
 
 
@@ -84,9 +87,10 @@ def update_recipe(recipe_id):
     recipes = mongo.db.recipes
     recipes.update( {'_id': ObjectId(recipe_id)},
     {
+        'category_name':request.form.get('category_name'),
         'recipe_name':request.form.get('recipe_name'),
         'ingredients':request.form.get('ingredients'),
-        'recipe_description': request.form.get('recipe_description'),
+        'preparation': request.form.get('preparation'),
         'allergens': request.form.get('allergens'),
         'author': request.form.get('username')
     })

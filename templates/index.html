@@ -2,20 +2,12 @@
 
 {% block content %}
 
-<div class="background">
-  <div class="river">
-    <div><b><ul class="right hide-on-med-and-down">
-                {% if session.username %}
-                <li>Hello, {{ session.username }}!</li>
-                {% endif %}
-                {% if not session.username %}
-                <li><a href="{{url_for('login')}}">Login</a></li>
-                <li><a href="{{url_for('register')}}">Register</a></li>
-                {% else %}
-                <li><a href="{{url_for('logout')}}">Logout</a></li>
-                {% endif %}
-                </ul></b></div>
-  </div>
+<div= "center-align"><p><b><h2>Welcome to the Recipe Sharing Community!!!</h2></b></p>
+
+   <p><h2>Feel Free to Learn and Share New Recipes!!!</h2></p>
+</div>
+ <div class="col-sm-12">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_xcxwMVgB7AtcvL154v9nWi4LDFs2MZ24J4LHFe_NTHGCCOrt&s" alt="Good Food" height="310" width="1200" class="center">
 </div>
 
 {% endblock %}

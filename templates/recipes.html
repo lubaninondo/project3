@@ -3,7 +3,7 @@
    <ul class="collapsible" data-collapsible="accordion">
         {% for recipe in recipes %}
             <div class=" recipe_header col s9">
-                    <b></p> <strong>{{category_name}}</strong> -{{recipe.recipe_name}}</b>
+                   <h1><b></p> <strong>{{recipe.recipe_name}}</strong></p></b></h1>
             </div>
             
             <div class="col-sm-12 ">
@@ -20,7 +20,7 @@
                 <p class="text_format"><b>Allergens</b>: {{recipe.allergens}}</p>
             </div>
             <div class="col-sm-12">
-                <img src="static/images/photo.jpg" alt="Food" height="42" width="42">
+                <img src="static/images/photo.jpg" alt="Food" height="620" width="620">
             </div>
          <div class="col-sm-12">   
         {% if recipe.author == session["username"] %}
@@ -38,8 +38,6 @@
 
 
 {% endblock %}
-
-
 
 
 

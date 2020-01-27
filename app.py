@@ -59,7 +59,7 @@ def add_recipe():
     if "username" in session:
         return render_template('addrecipe.html',recipe=the_recipe,)
     else:
-        return render_template("index.html")
+        return render_template("login.html")
 
     
 @app.route('/edit_recipe/<recipe_id>')

@@ -1,4 +1,5 @@
 import os
+import env
 from flask import Flask, render_template, redirect, request, url_for, flash,  session, make_response, current_app, abort
 from flask_login import LoginManager 
 from flask_user import login_required, UserManager, UserMixin
@@ -85,9 +86,9 @@ def insert_recipe():
 @app.route('/update_recipe/<recipe_id>', methods=["POST"])
 def update_recipe(recipe_id):
     recipes = mongo.db.recipes
+    categories= mongo.db.categories
     recipes.update( {'_id': ObjectId(recipe_id)},
     {
-        'category_name':request.form.get('category_name'),
         'recipe_name':request.form.get('recipe_name'),
         'ingredients':request.form.get('ingredients'),
         'preparation': request.form.get('preparation'),

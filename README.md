@@ -1,15 +1,17 @@
-# **Project 3**
+# **Project 3- Data- Centric (C.R.U.D)**
 
 The project allows for online cookbooks to be submitted online by hotel managers/ chefs of an International hote;. A user can add the name of the recipe, the author of the recipes and describe how to prepare the meal. Allergens should be mentioned if there available or not. If there are available there can be mentioned. 
 The user also has the ability to edit his/her recipe before and after submission. 
 
 # **UX**
 
-The website is ideal for individuals and chefs who like to share recipes and improve their cooking. The website was designed in such a way that the user can delete or edit the recipe they created but cannot change the ones created by other users. Users can view all the recipes
+The website is ideal for individuals and chefs who like to share recipes and improve their cooking. The website was designed in such a way that the user can delete or edit the recipe they created but cannot change the ones created by other users. Anyone who visits the website can view all the recipes
 
 First time users have to register using the email, username and password.
 
 Registered users can simple login and use the website
+
+Admin can delete, edit the recipes and users in the database
 
 # **Features**
 

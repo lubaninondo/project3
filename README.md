@@ -1,7 +1,9 @@
 # **Project 3- Data- Centric (C.R.U.D)**
 
-The project allows for online cookbooks to be submitted online by hotel managers/ chefs of an International hote;. A user can add the name of the recipe, the author of the recipes and describe how to prepare the meal. Allergens should be mentioned if there available or not. If there are available there can be mentioned. 
+The project allows for online cookbooks to be submitted online by hotel managers/ chefs of an International hote;. A user can add the name of the recipe, the author of the recipes and describe how to prepare the meal. Allergens should be mentioned if there available or not. If there are available there are to be mentioned. 
 The user also has the ability to edit his/her recipe before and after submission. 
+
+Anyone visiting the website can view the recipes.
 
 # **UX**
 
@@ -19,7 +21,7 @@ Admin can delete, edit the recipes and users in the database
    
    ## **Registration** :
    
-   New Users can register by filling the registration form. Email address, Username and password are needed to register an account
+   New Users can register by clicking restiger and filling the registration form. Email address, Username and password are needed to register an account
    
    ## **Login**
    
@@ -27,19 +29,19 @@ Admin can delete, edit the recipes and users in the database
    
    ## **Create/Add recipe**
    
-   Only registered users can create a recipe by clicking the new task button and fill the form
+   Only registered users can create a recipe by clicking the new task button and fill the form. If one tries to create a recipe without login in, the person will be refered to the login page.
    
    ## **Delete**
    
-   Only the creator of the recipe can delete it by clicking del in front of her recipe
+   Only the creator of the recipe can delete it by clicking del in front of her recipe. 
    
-   ## **Edit Recipe**
+   ## **Edit/Update Recipe**
     
-   Only the creator of the recipe can edit it by clicking edit in front of her recipe and fill in the edit task form
+   Only the creator of the recipe can edit it by clicking edit in front of her recipe and fill in the edit task form.The user can then      submit the edited version
  
    ## **Read**
  
- Only registered users have access to view recipes created by them and other users
+ Only registered users have access to view recipes created by them and other users by clicking recipes
  
  
  The following features are yet to be implemented:
@@ -76,6 +78,7 @@ Admin can delete, edit the recipes and users in the database
     
 # **Testing**
 
+Manual testing was performed
 ## **Registration**:
 
 Fill in the registration form. Email address, password and username are needed
@@ -90,31 +93,42 @@ Fill in the registration form. Email address, password and username are needed
 
 A registered user can use the username and password to login
 
-1. Correct username and password results in the user logging in and directed to the home page
+1. Correct username and password results in the user loging in and directed to the home page
 
 2. Using an unregistered username results in failure to login and a message saying username does not exist appearing
 
 3.Wrong password results in failure to log in and a wrong password message appearing
 
 
-## **Add Task**
+## **Add Recipe**
     
-  Click New task, then fill form and submit. New recipe will be created and will be directed to the home page
+  Click New task, then fill form and submit. New recipe will be created and will be directed to the recipes page.
+  
+  Trying to add recipe without login in leads to one being redirected to the login page.
+  
+  The admin can add recipe in mongodb under collections
+  
   
     
  ## **Editing**
     
-  Click on the edit button in front of the recipe created by the user, change any information in any variable and update task. Recipe     will be updated and user will be redirected to home page
-    
+  Click on the edit button in front of the recipe created by the user, change any information in any variable and update task. Recipe     will be updated and user will be redirected to recipe page
+  
+  The admin can edit recipes under the recipes collection in mongodb. After editing the admin can click update. The record will be updated
    
-  ## **Delete Task**
+  ## **Delete Recipe**
    
-   Click on the Del button in front of the recipe created by the user, Delete the task and the user will be redirected to home page
-    
+   Click on the Del button in front of the recipe created by the user, Delete the task and the user will be redirected to recipe page
+   
+   The admin can delete a recipe in mongodb by choosing a recipe in mongo collections under recipes collection. Click the bin icon and      click. The recipe will be flagged to be deleted. Confirm deleting by deleting.
    
    ## **Responsiveness**
     
-   The website was tested and respond to devices of different sizes using Chrome Developer tools. Right click in the website, click on      inspect. Adjust size of screen and see how it responds to different devices.
+   The website was tested and respond to devices of different sizes using Chrome Developer tools. Right click in the website, click on      inspect. Adjust size of screen and see how it responds to different devices. The website was also tested using a mobile phone Samsung    A10
+   
+   ## **Delete Users**
+   
+   The admin can delete users by selecting the users collection in Mongodb. Select the user and delete the records in database.
 
 # **Deployment**
 

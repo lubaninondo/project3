@@ -148,6 +148,18 @@ The  project was deployed to [Heroku](http://project3-heroku-mongo.herokuapp.com
  
  PORT
  
+ **This is how I was updated my github**
+ 
+ In AWS terminal bash I used the following commands:
+ 
+ git add .
+ 
+ git commit -m 'name of new commit'
+ 
+ git push origin master
+ 
+ I then responded by filling the correct username and password
+ 
  
 
 

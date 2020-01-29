@@ -118,7 +118,7 @@ A registered user can use the username and password to login
    
   ## **Delete Recipe**
    
-   Click on the Del button in front of the recipe created by the user, Delete the task and the user will be redirected to recipe page
+   Click on the Del button in front of the recipe created by the user, Delete the recipe and the user will be redirected to recipe page
    
    The admin can delete a recipe in mongodb by choosing a recipe in mongo collections under recipes collection. Click the bin icon and      click. The recipe will be flagged to be deleted. Confirm deleting by deleting.
    

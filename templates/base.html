@@ -11,39 +11,39 @@
      <header>
         <nav>
             <div class="nav-wrapper">
-                <a href="{{url_for('get_recipes')}}" class="brand-logo">Recipes</a>
+                <a href="{{url_for('index')}}" class="brand-logo">Home</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="{{url_for('get_recipes')}}">Recipes</a></li>
-                    <li><a href="{{url_for('add_recipe')}}">New Recipe</a></li>
-                   
-                <ul class="right hide-on-med-and-down">
-                {% if session.username %}
-                <li>Hello, {{ session.username }}!</li>
-                {% endif %}
-                {% if not session.username %}
-                <li><a href="{{url_for('login')}}">Login</a></li>
-                <li><a href="{{url_for('register')}}">Register</a></li>
-                {% else %}
-                <li><a href="{{url_for('logout')}}">Logout</a></li>
-                {% endif %}
-                </ul>
+                    <li><a href="{{url_for('add_recipe')}}">New Recipe</a></li>      
+                    <li><ul class="right hide-on-med-and-down">
+                    {% if session.username %}
+                    <li>Hello, {{ session.username }}!</li>
+                    {% endif %}
+                    {% if not session.username %}
+                    <li><a href="{{url_for('login')}}">Login</a></li>
+                    <li><a href="{{url_for('register')}}">Register</a></li>
+                    {% else %}
+                    <li><a href="{{url_for('logout')}}">Logout</a></li>
+                    {% endif %}
+                    </ul>
+                    </li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <li><a href="{{url_for('get_recipes')}}">Recipes</a></li>
-                    <li><a href="{{url_for('add_recipe')}}">New recipe</a></li>
-                    <ul class="right hide-on-med-and-down">
-                {% if session.username %}
-                <li>Hello, {{ session.username }}!</li>
-                {% endif %}
-                {% if not session.username %}
-                <li><a href="{{url_for('login')}}">Login</a></li>
-                <li><a href="{{url_for('register')}}">Register</a></li>
-                {% else %}
-                <li><a href="{{url_for('logout')}}">Logout</a></li>
-                {% endif %}
-                </ul>
-                    
+                    <li><a href="{{url_for('add_recipe')}}">New Recipe</a></li>      
+                    <li>
+                    {% if session.username %}
+                    <li>Hello, {{ session.username }}!</li>
+                    {% endif %}
+                    {% if not session.username %}
+                    <li><a href="{{url_for('login')}}">Login</a></li>
+                    <li><a href="{{url_for('register')}}">Register</a></li>
+                    {% else %}
+                    <li><a href="{{url_for('logout')}}">Logout</a></li>
+                    {% endif %}
+                    </ul>
+                    </li>
                 </ul>
             </div>
         </nav>
